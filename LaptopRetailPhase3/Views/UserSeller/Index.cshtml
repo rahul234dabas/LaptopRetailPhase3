@@ -1,0 +1,17 @@
+﻿<h1>Seller Login Page</h1>
+@using (Html.BeginForm())
+{
+    @Html.Label("fname", "Enter your FirstName: ");
+    <br />
+    @Html.TextBox("fname");
+    <br />
+    @Html.Label("password", "Enter Password: ");
+    <br />
+    @Html.Password("password");
+
+    <br />
+    <br />
+    <button>Login</button><br />
+    <a  asp-action="Create">New Seller Registration</a>
+}
+<a asp-controller="Home" asp-action="index">Back to index</a>

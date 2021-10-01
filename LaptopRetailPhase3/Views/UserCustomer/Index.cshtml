@@ -1,0 +1,18 @@
+﻿<h1>Customer Login Page</h1>
+@using (Html.BeginForm())
+{
+    @Html.Label("cemail", "Enter your Email: ");
+    <br />
+    @Html.TextBox("cemail");
+    <br />
+    @Html.Label("pno", "Enter your Phone number: ");
+    <br />
+    @Html.Password("pno");
+
+    <br />
+    <br />
+    <button>Login</button>
+    <br />
+    <a asp-action="Create">New Customer Registration</a>
+}
+<a asp-controller="Home" asp-action="index">Back to index</a>

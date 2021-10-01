@@ -1,0 +1,63 @@
+﻿@model LaptopRetailPhase3.Models.TblLaptop
+
+@{
+    ViewData["Title"] = "Add new Laptop";
+}
+
+<h1>Laptop Registration</h1>
+
+<h4>Add new Laptop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateLaptop">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Sno" class="control-label"></label>
+                <input asp-for="Sno" class="form-control" />
+                <span asp-validation-for="Sno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopName" class="control-label"></label>
+                <input asp-for="LaptopName" class="form-control" />
+                <span asp-validation-for="LaptopName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelNo" class="control-label"></label>
+                <input asp-for="ModelNo" class="form-control" />
+                <span asp-validation-for="ModelNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Processor" class="control-label"></label>
+                <input asp-for="Processor" class="form-control" />
+                <span asp-validation-for="Processor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ram" class="control-label"></label>
+                <input asp-for="Ram" class="form-control" />
+                <span asp-validation-for="Ram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rom" class="control-label"></label>
+                <input asp-for="Rom" class="form-control" />
+                <span asp-validation-for="Rom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

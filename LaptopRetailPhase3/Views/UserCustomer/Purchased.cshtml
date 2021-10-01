@@ -1,0 +1,39 @@
+﻿
+@{
+    var list = ViewBag.list;
+}
+<h2>List of purchased items</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sno</th>
+            <th>LaptopName</th>
+            <th>Model No</th>
+            <th>Price</th>
+            <th>Processor</th>
+            <th>Ram</th>
+            <th>Rom</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ 
+            foreach(var item in list)
+            {
+                <tr>
+                    <td>@item.Sno</td>
+                    <td>@item.LaptopName</td>
+                    <td>@item.ModelNo</td>
+                    <td>@item.Price</td>
+                    <td>@item.Processor</td>
+                    <td>@item.Ram</td>
+                    <td>@item.Rom</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<br />
+<a asp-action="Payment"><button class="btn-primary">Buy</button></a>
+<br />
+<a asp-action="PurchaseLaptop"><button class="btn-info">Add more to cart</button></a>

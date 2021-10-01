@@ -1,0 +1,16 @@
+﻿<h1>Admin Login Page</h1>
+@using (Html.BeginForm())
+{
+    @Html.Label("uname", "Enter your Username: ");
+    <br />
+    @Html.TextBox("uname");
+    <br />
+    @Html.Label("password", "Enter Password: ");
+    <br />
+    @Html.Password("password");
+    
+    <br />
+    <br />
+    <button>Login</button>
+}
+<a asp-controller="Home" asp-action="index">Back to index</a>

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<LaptopRetailPhase3.Models.TblLaptop>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List of Laptops</h1>
+
+<p>
+    <a asp-action="Create">New Customer Registration</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaptopName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Processor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ram)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rom)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaptopName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModelNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Processor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ram)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rom)
+                </td>
+                <td>
+
+                    <a asp-action="Details" asp-route-id="@item.Sno">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<a asp-action="PurchaseLaptop" >Purchase a Laptop</a>
